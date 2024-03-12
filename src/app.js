@@ -17,6 +17,11 @@ app.use(bodyParser.json())
 //Routes
 app.use("/books", router)
 
+app.get("/", (req, res)=>{
+    res.send("Welcome with API REST the major books")
+
+})
+
 
 const bootstrap = async () => {
     await connectDB(process.env.MONGO_URL);
